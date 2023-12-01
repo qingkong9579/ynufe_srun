@@ -119,9 +119,9 @@ def convert_bytes_to_human_readable(sum_bytes):
 
 if __name__ == '__main__':
 	global username,password
-	username = '******'
+	username = "******"
 	username = username +'@ynufe'
-	password="******"
+	password= "******"
 	init_getip()
 	get_token()
 	do_complex_work()
