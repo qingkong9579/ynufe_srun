@@ -53,8 +53,6 @@ while True:
         print("在线时长:", seconds_to_hms(info['keepalive_time']-info['add_time']))
         print("已用流量:", convert_bytes_to_human_readable(sum_bytes))
         print("已用时长:", seconds_to_hms(info['sum_seconds']))
-        print("程序执行完毕")
-        input("按Enter键退出...")
 
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
