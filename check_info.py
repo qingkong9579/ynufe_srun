@@ -1,5 +1,6 @@
 from datetime import datetime, timedelta
 import json
+import os
 import time
 import requests
 
@@ -38,6 +39,7 @@ def convert_bytes_to_human_readable(sum_bytes):
 
 while True:
     try:
+        os.system('cls' if os.name == 'nt' else 'clear')
         get_info_api="http://172.16.130.31/cgi-bin/rad_user_info?callback=jQuery112406118340540763985_1556004912581&_=1556004912582"
         res=requests.get(get_info_api,headers=header)
         info=json.loads(res.text[42:-1])
@@ -57,4 +59,4 @@ while True:
     except requests.exceptions.RequestException as e:
         print(f"Error: {e}")
 
-    time.sleep(10)
+    time.sleep(5)
