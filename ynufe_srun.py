@@ -133,6 +133,7 @@ if __name__ == '__main__':
 	print("产品名称:", info['products_name'])
 	print("用户MAC:", info['user_mac'])
 	print("在线IP:",info['online_ip']) 
+	print("在线设备数", info['online_device_total'])
 	print("登陆时间:", datetime.fromtimestamp(info['add_time']).strftime('%Y-%m-%d %H:%M:%S'))
 	print("在线时长:", seconds_to_hms(info['keepalive_time']-info['add_time']))
 	print("已用流量:", convert_bytes_to_human_readable(sum_bytes))
